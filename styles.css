@@ -1,0 +1,162 @@
+/* Reset default margin and padding */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color */
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the main content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the countdown section */
+#countdown {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Style the countdown timer */
+#countdown {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#countdown-timer {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style the virtual card section */
+#virtual-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the "Reveal Card" button */
+#reveal-card-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the card content */
+#card-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#card-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#card-content p {
+    margin-bottom: 20px;
+}
+
+#card-content img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Style for the header */
+header {
+    background-color: #8B0000; /* Dark red color */
+    padding: 10px 0; /* Add padding to give some space around the text */
+}
+
+/* Style for the header text */
+header h1 {
+    /* Add styles for the header text here */
+    color: #fff; /* White text color */
+}
+/* Import Playfair Display font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Import Quicksand font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+header h1,
+#countdown,
+#virtual-card,
+#reveal-card-button
+ {
+    font-family: 'Playfair Display', serif;
+    /* Add other styles here */
+}
+
+#card-content {
+    font-family: Arial, 'Quicksand'; 
+    /* Add other styles for the content here */
+}
+
+@font-face {
+    font-family: 'VT323';
+    src: url('fonts/VT323-Regular.ttf') format('truetype');
+    /* Adjust the path and format */
+}
+
+/* Apply VT323 font to the countdown text */
+
+#countdown {
+    font-family: 'VT323', monospace; /* Use the VT323 font or fallback to a monospace font */
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #0000FF; /* Text color */
+}
+
+#countdown-timer {
+    font-family: 'VT323', monospace; /* Use the VT323 font or fallback to a monospace font */
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #0000FF; /* Text color */
+}
+
+/* Use the GIF as the background and apply animation */
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: url('paradiso.jpg');
+    background-size: cover;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+    font-size: 12px;
+}

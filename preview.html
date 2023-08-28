@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Feliz Boda, Carlinchis!</h1>
+    </header>
+    <main>
+        <div id="countdown">
+            <h2>Dias antes de la bailanta</h2>
+            <p id="countdown-timer">X days X hours X minutes X seconds</p>
+        </div>
+        <div id="virtual-card">
+             <h2>Tarjeta Virtual</h2>
+             <p>Clic aqui para ganarse 6 cuadrillones de pesos! (mentira, es un mensaje de felicitaciones)</p>
+             <p>.</p>
+             <p>.</p>
+             <p>.</p>
+             <button id="reveal-card-button">Revelar Mensaje</button>
+             <div id="card-content" class="hidden">
+                 <h3>Felicitaciones, Hurras y Vivas!</h3>
+                 <p>Yo me considero un extraño, una persona que solo ha interactuado con ustedes mediante Twitter y poco mas, sin embargo, la felicidad que me da ver a un par de personas tan buenas y agradables llegar a este punto, en donde su amor es realizado, me impulso a diseñar esta pagina y este mensaje.</p>
+                 
+                 <p>Hace 3 años y medio los conoci, no recuerdo muy bien el como ni el porque, probablemente tuvo que ver con Santa Fe, algun mensaje en cuanto al juego de ese dia, o talvez fue un comentario debajo del video de la ratica, quien sabe. Lo que importa es que era de las primeras veces que interactuaba con alguien fuera de la vida real, y en poco tiempo me di cuenta que habia sido buena idea, de que el extraño en la otra parte de la pantalla era simpatico, gracioso y talentoso.</p>
+                 
+                 <p>A la señorita Vanessa no la conozco muy bien, pero para lo que me compete, es tambien una persona muy inteligente y simpatica, radiante e inflexible en sus pensamientos.</p>
+                 
+                 <p>Todos hemos cambiado en estos 3 años y medio, algunos para mejor y otros para peor, y muy probablemente pasaran los años y seguiremos cambiando aun mas, pero lo que importa es siempre estar juntos, siempre tener almenos una persona que nos diga o nos enseñe que la vida va a mejorar, que todo va a salir bien al final.</p>
+                
+                 <p>El matrimonio en mi personal opinion es la cosa mas fantastica de este mundo, el acto de amor mas hermoso y puro, la culminacion de meses o años de acostumbrarse al otro, de sentir felicidad y tristeza con la felicidad y tristeza del otro, de explotar en alegria por los gustos en comun y trabajar tranquilo para resolver conflictos. No hay nada mas bonito que un acto de amor, y no hay mejor acto de amor que el matrimonio. El fuego que mantiene viva a la humanidad, es el Amor. </p>
+                 
+                 <p>Cuando las paredes se caen, cuando pierdes todo lo que tienes y la luz de tu mente no puede quemar la oscuridad, se tendran siempre a ustedes, y a todos los que aman.</p>
+
+                 <p>Felicitaciones! Yupi! Hurra! Viva! Que este matrimonio dure un millon de años, y cuando pasen los años y asciendan al reino de los cielos, que ojala se amen otro millon de años mas.</p>
+
+                 <img src="collage.png" alt="collageamorsh" width="720">
+
+                 <p>(Mil disculpas por usar arte IA en el collage, pero es que soy bien maluco para dibujar) </p>
+
+                 <p>Con todo mi aprecio y agradeciendo la atencion de antemano. </p>
+
+                 <p>- Nicolas Daza Reina (a veces conocido como NeoOmegav) </p>
+
+                 <audio id="wedding-song" src="Te Regalo.mp3"></audio>
+             </div>
+    </div>
+        </div>
+    </main>
+<script>
+    // Function to calculate and update the countdown timer
+    function updateCountdown() {
+        const weddingDate = new Date("2023-09-02T01:00:00-05:00"); // Set your wedding date here in ISO 8601 format
+        const currentDate = new Date();
+        
+        const timeDifference = weddingDate - currentDate;
+        
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
+        document.getElementById("countdown-timer").textContent = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    }
+
+    // Call the updateCountdown function initially
+    updateCountdown();
+
+    // Update the countdown every second
+    setInterval(updateCountdown, 1000);
+
+    // Function to reveal the virtual wedding card content
+    function revealCard() {
+        const weddingDate = new Date("2023-09-02T01:00:00-05:00"); // Replace with your wedding date
+        const currentDate = new Date();
+        const audioElement = document.getElementById("wedding-song");
+
+        if (currentDate < weddingDate) {
+            // Display a popup warning
+            document.getElementById("reveal-card-button").classList.add("hidden");
+            document.getElementById("card-content").classList.remove("hidden");
+            audioElement.play(); // Play the song
+        } else {
+            alert("No sea impaciente, ala! El matrimonio es el Sabado!");
+        }
+    }
+
+    // Add event listener to the "Reveal Card" button
+    document.getElementById("reveal-card-button").addEventListener("click", revealCard);
+</script>
+</body>
+</html>
